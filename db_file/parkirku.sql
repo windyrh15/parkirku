@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 23, 2019 at 10:53 AM
--- Server version: 10.3.16-MariaDB
--- PHP Version: 7.3.7
+-- Generation Time: Mar 24, 2024 at 03:59 PM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -36,7 +35,7 @@ CREATE TABLE `msk` (
   `jmklr` datetime DEFAULT NULL,
   `total` int(20) DEFAULT NULL,
   `status` varchar(25) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `msk`
@@ -62,7 +61,7 @@ CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Dumping data for table `user`
@@ -70,9 +69,7 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`) VALUES
 (2, 'admin', '$2y$10$y62WNP78y/oyFG9ibxK2QewJ7C4A2phFOPV1nY5yuWHKHepIhht2i'),
-(17, 'windy', '$2y$10$smaBpemuk0kKr9gWWT.vWudgFWNQ4cYvOYb5ej.tOVGObSC9wFWnG'),
-(18, 'axel', '$2y$10$AS72WgX/HCaHztz2MVHeyuFWHcSJFrglbsIlCaYRx/Z8mXXfpjB4G'),
-(19, 'puput', '$2y$10$1sCdGlZowDeHrO0giYyFE.5GlHBku8IQISNpi8pDrM6gw4BbWUK2a');
+(21, 'itswenday', '$2y$10$hgcNuNObEixRZnpYeu/z7ueqCcOaEGFWCfOpd/.Oop6ufKj3Ng.uy');
 
 --
 -- Indexes for dumped tables
@@ -104,7 +101,7 @@ ALTER TABLE `msk`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
